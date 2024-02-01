@@ -1,0 +1,1 @@
+# Vendor application inventory platform
