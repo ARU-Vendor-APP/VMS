@@ -15,7 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls.conf import include
+from rest_framework.routers import DefaultRouter
+from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from VMS.product.views import ProductViewSet, CategoryViewSet, PricingViewSet, FreeTrialViewSet, ReviewViewSet
+
+router = DefaultRouter()
+
+router.register(r"products", ProductViewSet, basename="product")
+router.register(r"pricings", PricingViewSet, basename="pricing")
+router.register(r"free-trials", FreeTrialViewSet, basename="free-trial")
+router.register(r"reviews", ReviewViewSet, basename="review")
+router.register(r"categories", CategoryViewSet, basename="category")
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/", include(router.urls)),
+    path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
+    path("api/schema/swagger-ui/", SpectacularSwaggerView.as_view(url_name="schema"), name="swagger-ui"),
+    path("api/schema/redoc/", SpectacularRedocView.as_view(url_name="schema"), name="redoc"),
 ]
