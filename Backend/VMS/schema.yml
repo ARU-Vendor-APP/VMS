@@ -17,9 +17,8 @@ paths:
       tags:
       - categories
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -44,9 +43,8 @@ paths:
               $ref: '#/components/schemas/Category'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '201':
           content:
@@ -67,9 +65,8 @@ paths:
       tags:
       - categories
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -101,9 +98,8 @@ paths:
               $ref: '#/components/schemas/Category'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -134,9 +130,8 @@ paths:
             schema:
               $ref: '#/components/schemas/PatchedCategory'
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -156,9 +151,8 @@ paths:
       tags:
       - categories
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '204':
           description: No response body
@@ -175,9 +169,8 @@ paths:
       tags:
       - free-trials
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -202,9 +195,8 @@ paths:
               $ref: '#/components/schemas/FreeTrial'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '201':
           content:
@@ -225,9 +217,8 @@ paths:
       tags:
       - free-trials
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -259,9 +250,8 @@ paths:
               $ref: '#/components/schemas/FreeTrial'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -292,9 +282,8 @@ paths:
             schema:
               $ref: '#/components/schemas/PatchedFreeTrial'
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -314,9 +303,8 @@ paths:
       tags:
       - free-trials
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '204':
           description: No response body
@@ -333,9 +321,8 @@ paths:
       tags:
       - pricings
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -360,9 +347,8 @@ paths:
               $ref: '#/components/schemas/Pricing'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '201':
           content:
@@ -383,9 +369,8 @@ paths:
       tags:
       - pricings
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -417,9 +402,8 @@ paths:
               $ref: '#/components/schemas/Pricing'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -450,9 +434,8 @@ paths:
             schema:
               $ref: '#/components/schemas/PatchedPricing'
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -472,9 +455,8 @@ paths:
       tags:
       - pricings
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '204':
           description: No response body
@@ -491,9 +473,8 @@ paths:
       tags:
       - products
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -518,9 +499,8 @@ paths:
               $ref: '#/components/schemas/Product'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '201':
           content:
@@ -541,9 +521,8 @@ paths:
       tags:
       - products
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -575,9 +554,8 @@ paths:
               $ref: '#/components/schemas/Product'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -608,9 +586,8 @@ paths:
             schema:
               $ref: '#/components/schemas/PatchedProduct'
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -630,9 +607,8 @@ paths:
       tags:
       - products
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '204':
           description: No response body
@@ -649,9 +625,8 @@ paths:
       tags:
       - reviews
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -676,9 +651,8 @@ paths:
               $ref: '#/components/schemas/Review'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '201':
           content:
@@ -699,9 +673,8 @@ paths:
       tags:
       - reviews
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -733,9 +706,8 @@ paths:
               $ref: '#/components/schemas/Review'
         required: true
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -766,9 +738,8 @@ paths:
             schema:
               $ref: '#/components/schemas/PatchedReview'
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '200':
           content:
@@ -788,9 +759,8 @@ paths:
       tags:
       - reviews
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
-      - {}
       responses:
         '204':
           description: No response body
@@ -917,8 +887,8 @@ paths:
       tags:
       - schema
       security:
+      - tokenAuth: []
       - cookieAuth: []
-      - basicAuth: []
       - {}
       responses:
         '200':
@@ -1149,6 +1119,14 @@ components:
         id:
           type: integer
           readOnly: true
+        category:
+          $ref: '#/components/schemas/Category'
+        pricing:
+          $ref: '#/components/schemas/Pricing'
+        free_trial:
+          $ref: '#/components/schemas/FreeTrial'
+        review:
+          $ref: '#/components/schemas/Review'
         name:
           type: string
           maxLength: 100
@@ -1185,12 +1163,6 @@ components:
           type: boolean
         is_active:
           type: boolean
-        category:
-          type: integer
-        pricing:
-          type: integer
-        free_trial:
-          type: integer
     PatchedReview:
       type: object
       properties:
@@ -1239,6 +1211,14 @@ components:
         id:
           type: integer
           readOnly: true
+        category:
+          $ref: '#/components/schemas/Category'
+        pricing:
+          $ref: '#/components/schemas/Pricing'
+        free_trial:
+          $ref: '#/components/schemas/FreeTrial'
+        review:
+          $ref: '#/components/schemas/Review'
         name:
           type: string
           maxLength: 100
@@ -1275,12 +1255,6 @@ components:
           type: boolean
         is_active:
           type: boolean
-        category:
-          type: integer
-        pricing:
-          type: integer
-        free_trial:
-          type: integer
       required:
       - category
       - description
@@ -1295,6 +1269,7 @@ components:
       - pricing
       - rating
       - report_file
+      - review
       - statistics
       - video_url
     Review:
@@ -1326,10 +1301,12 @@ components:
       - rating
       - review
   securitySchemes:
-    basicAuth:
-      type: http
-      scheme: basic
     cookieAuth:
       type: apiKey
       in: cookie
       name: sessionid
+    tokenAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: Token-based authentication with required prefix "Token"

@@ -18,7 +18,7 @@ from django.urls import path
 from django.urls.conf import include
 from rest_framework.routers import DefaultRouter
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
-from VMS.product.views import ProductViewSet, CategoryViewSet, PricingViewSet, FreeTrialViewSet, ReviewViewSet
+from VMS.product.views import ProductViewSet, CategoryViewSet, UserViewSet, PricingViewSet, VendorViewSet, FreeTrialViewSet, ReviewViewSet
 
 router = DefaultRouter()
 
@@ -27,6 +27,9 @@ router.register(r"pricings", PricingViewSet, basename="pricing")
 router.register(r"free-trials", FreeTrialViewSet, basename="free-trial")
 router.register(r"reviews", ReviewViewSet, basename="review")
 router.register(r"categories", CategoryViewSet, basename="category")
+router.register(r"users", UserViewSet, basename="user")
+router.register(r"register", UserViewSet, basename="register")
+router.register(r"vendors", VendorViewSet, basename="vendor")
 
 
 urlpatterns = [
