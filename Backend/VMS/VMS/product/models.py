@@ -69,6 +69,9 @@ class User(models.Model):
 
     def __str__(self):
         return self.name
+    def create(self, validated_data):
+        user = User.objects.create_user(**validated_data)
+        return user
     
 class Vendor(models.Model):
     name = models.CharField(max_length=100)
