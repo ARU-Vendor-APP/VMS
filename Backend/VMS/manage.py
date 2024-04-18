@@ -4,6 +4,8 @@ import os
 import sys
 from VMS.settings import base
 
+from django.core.management.utils import get_random_secret_key
+print(get_random_secret_key())
 
 def main():
     """Run administrative tasks."""
