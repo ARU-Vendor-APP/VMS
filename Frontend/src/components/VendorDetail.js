@@ -33,7 +33,7 @@ const VendorDetail = (props) => {
   const [contactModalMode, setContactModalMode] = useState(null);
   const [msaModalMode, setMsaModalMode] = useState(null);
   const [w9ModalMode, setW9ModalMode] = useState(null);
-  const [contact, setContact] = useState(null);
+  const [contact, setContact] = useState();
   const [msa, setMsa] = useState(null);
   const [w9, setW9] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
@@ -195,29 +195,29 @@ const VendorDetail = (props) => {
             <OverviewSection vendor={vendor} />
 
             {/* MSA section */}
-            <MsaSection
+            {/* <MsaSection
               vendor={vendor}
               updateVendor={handleVendorUpdate}
               toggleMsaAddModal={toggleMsaAddModal}
               toggleMsaEditModal={toggleMsaEditModal}
-            />
+            /> */}
 
             {/* COI section */}
-            <CoiSection
+            {/* <CoiSection
               vendor={vendor}
               fetchVendor={() => {
                 fetchVendor(true);
               }}
               updateVendor={handleVendorUpdate}
-            />
+            /> */}
 
             {/* W9 section */}
-            <W9Section
+            {/* <W9Section
               vendor={vendor}
               updateVendor={handleVendorUpdate}
               toggleW9AddModal={toggleW9AddModal}
               toggleW9EditModal={toggleW9EditModal}
-            />
+            /> */}
 
             {/* Contacts section */}
             <ContactSection

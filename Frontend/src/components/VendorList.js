@@ -1,42 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import { withToken } from '../lib/authHandler'
-import axios from 'axios'
-import { SearchIcon, PlusCircleIcon } from '@heroicons/react/solid'
-import toast from 'react-hot-toast'
+import React, { useState, useEffect } from "react";
+import { withToken } from "../lib/authHandler";
+import axios from "axios";
+import { SearchIcon, PlusCircleIcon } from "@heroicons/react/solid";
+import toast from "react-hot-toast";
 
 const VendorList = (props) => {
-  const [vendors, setVendors] = useState(props.vendors)
-  const [queryTerm, setQueryTerm] = useState('')
+  const [vendors, setVendors] = useState(props.vendors);
+  const [queryTerm, setQueryTerm] = useState("");
 
   const getVendorInitials = (vendor) => {
-    const words = vendor.name.split(' ')
+    const words = vendor.name.split(" ");
     if (words.length > 1) {
-      return `${words[0][0].toUpperCase() + words[1][0].toUpperCase()}`
+      return `${words[0][0].toUpperCase() + words[1][0].toUpperCase()}`;
     } else {
-      return words[0][0]
+      return words[0][0];
     }
-  }
+  };
 
   const handleQueryTermChange = (e) => {
-    setQueryTerm(e.target.value)
-  }
+    setQueryTerm(e.target.value);
+  };
 
   useEffect(() => {
     const queryVendors = async () => {
       try {
-        let config = withToken()
-        config.params = { query_term: queryTerm }
+        let config = withToken();
+        config.params = { query_term: queryTerm };
 
-        const res = await axios.get('/api/v1/vendor_list', config)
+        const res = await axios.get("/api/v1/vendor_list", config);
         if (res.status === 200) {
-          setVendors(res.data)
+          setVendors(res.data);
         }
       } catch (error) {
-        toast.error('Something went wrong fetching vendor list.')
+        toast.error("Something went wrong fetching vendor list.");
       }
-    }
-    queryVendors()
-  }, [queryTerm, props.vendors])
+    };
+    queryVendors();
+  }, [queryTerm, props.vendors]);
 
   return (
     <aside className="hidden xl:order-first xl:flex xl:flex-col flex-shrink-0 w-96 border-r border-gray-200">
@@ -94,7 +94,7 @@ const VendorList = (props) => {
                 <h3>{letter}</h3>
               </div>
               <ul className="relative z-0 divide-y divide-gray-200">
-                {vendors[letter].map((vendor) => (
+                {vendors.map((vendor) => (
                   <li key={vendor.id}>
                     <div className="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-blue-500">
                       <div className="flex-shrink-0">
@@ -131,7 +131,7 @@ const VendorList = (props) => {
         </nav>
       ) : null}
     </aside>
-  )
-}
+  );
+};
 
-export default VendorList
+export default VendorList;

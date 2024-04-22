@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Product, Category, Pricing, FreeTrial, Review, User
+from .models import Product, Vendor, Category, Pricing, FreeTrial, Review, User
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
@@ -49,3 +49,6 @@ class VendorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
         fields = '__all__'
+
+    def create(self, validated_data):
+        return Vendor.objects.create_vendor(**validated_data)

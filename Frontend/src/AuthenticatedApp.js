@@ -48,7 +48,38 @@ const navigation = [
 
 export default function AuthenticatedApp() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [currentUser, setCurrentUser] = useState();
+  const [currentUser, setCurrentUser] = useState({
+    username: "Guest",
+    companies: [
+      {
+        full_name: "Nke",
+        id: 1,
+        users: [
+          {
+            id: 1,
+            full_name: "Nke",
+            email: "text lorem ipsum",
+            created_at: "2024-09-29T14:00:00.000Z",
+            status: "active",
+            vendor: "vendor 1",
+          },
+        ],
+      },
+      {
+        full_name: "Nke",
+        id: 1,
+        users: [
+          {
+            id: 1,
+            full_name: "Nke",
+            email: "gmail.com",
+            created_at: "2021-09-29T14:00:00.000Z",
+            status: "active",
+          },
+        ],
+      },
+    ],
+  });
   const { clearAuth, clearUser } = useAuth();
 
   const handleLogout = () => {

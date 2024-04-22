@@ -160,7 +160,7 @@ const VendorEdit = (props) => {
                             htmlFor="project-name"
                             className="block text-sm font-medium text-gray-900 sm:mt-px sm:pt-2"
                           >
-                            Website
+                            Company
                           </label>
                         </div>
                         <div className="sm:col-span-2">

@@ -77,5 +77,27 @@ class Vendor(models.Model):
     is_deleted = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
 
+    def create_vendor(self, name, email, password=None, **kwargs):
+        """
+            Create and return a
+            'vendor with email, phone number, name and password.'
+        """
+        if name is None:
+            raise TypeError('vendors must have an name.')
+        if email is None:
+            raise TypeError('vendor must have an email.')
+        if password is None:
+            raise TypeError('vendor must have a password.')
+
+        vendor = self.model(
+            name=name,
+            email=self.normalize_email(email),
+            **kwargs
+        )
+        vendor.set_password(password)
+        vendor.save(using=self._db)
+
+        return vendor
+
     def __str__(self):
         return self.name

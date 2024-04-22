@@ -113,7 +113,7 @@ const VendorAddModal = (props) => {
                             htmlFor="name"
                             className="block text-sm font-medium text-gray-700"
                           >
-                            Vendor name
+                            Vendor full name
                           </label>
                           <div className="mt-1">
                             <input
@@ -130,12 +130,12 @@ const VendorAddModal = (props) => {
                             htmlFor="website"
                             className="block text-sm font-medium text-gray-700"
                           >
-                            Website
+                            email
                           </label>
                           <div className="mt-1">
                             <input
                               type="text"
-                              {...register("website")}
+                              {...register("email")}
                               className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                             />
                           </div>
@@ -146,7 +146,7 @@ const VendorAddModal = (props) => {
                             htmlFor="description"
                             className="block text-sm font-medium text-gray-700"
                           >
-                            Company description
+                            Company
                           </label>
                           <div className="mt-1">
                             <textarea
